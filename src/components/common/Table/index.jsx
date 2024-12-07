@@ -2,6 +2,7 @@ import React from "react";
 import { TABLE_HEADINGS } from "@config/constants";
 import { IMAGE_URL } from "../../../config/constants";
 import { Icon } from "@iconify/react";
+import formatIndianNumber from "../../../utils/fomats.utils";
 
 const COLLEGES = [
   {
@@ -437,33 +438,140 @@ function Table() {
               <div className="text-sm flex justify-between py-4">
                 <button className="flex gap-1 text-[#FF7900]">
                   <span>
-                  <Icon icon="ix:arrow-right" width="20" height="20" />
+                    <Icon icon="ix:arrow-right" width="20" height="20" />
                   </span>
                   <span>Apply Now</span>
                 </button>
 
                 <button className="flex gap-1 text-[#3EAE8D]">
                   <span>
-                  <Icon icon="material-symbols-light:download" width="20" height="20" />
+                    <Icon
+                      icon="material-symbols-light:download"
+                      width="20"
+                      height="20"
+                    />
                   </span>
                   <span> Dowload Brochure</span>
                 </button>
 
                 <span className="flex gap-1">
-                  <input type="checkbox" name="add-to-compare" id="add-to-compares"/>
+                  <input
+                    type="checkbox"
+                    name="add-to-compare"
+                    id="add-to-compares"
+                  />
                   <label htmlFor="add-to-compare">Add To Compare</label>
                 </span>
               </div>
             </td>
 
             {/*Course Fees*/}
-            <td className=" p-3 border-r-[1px] border-r-[#dedede]"></td>
+            <td className=" p-3 border-r-[1px] border-r-[#dedede] align-top space-y-3">
+              <div className="text-[#3EAE8D] text-base font-bold hover:underline hover:cursor-pointer">
+                <span>₹ </span>
+                <span>
+                  {college?.fees?.[0]?.fee
+                    ? formatIndianNumber(college?.fees?.[0]?.fee)
+                    : "N/A"}
+                </span>
+              </div>
+              <div className="text-xs text-[#666666] font-medium hover:underline hover:cursor-pointer">
+                BE/B.Tech
+              </div>
+              <div className="text-xs text-[#666666] font-medium hover:underline hover:cursor-pointer">
+                - 1st Year Fees
+              </div>
+              <button className="flex gap-1 text-xs text-[#ff7900]">
+                <span>
+                  <Icon
+                    icon="fluent:arrow-swap-16-filled"
+                    width="20"
+                    height="20"
+                  />
+                </span>
+                <span>Compare Fees</span>
+              </button>
+            </td>
 
             {/*Placement*/}
-            <td className=" p-3 border-r-[1px] border-r-[#dedede]"></td>
+            <td className=" p-3 border-r-[1px] border-r-[#dedede] align-top space-y-3">
+              <div className="font-bold hover:underline hover:cursor-pointer ">
+                <div className="text-[#3EAE8D] text-base ">
+                  <span>₹ </span>
+                  <span>
+                    {college?.placement?.average_salary
+                      ? formatIndianNumber(college?.placement?.average_salary)
+                      : "N/A"}
+                  </span>
+                </div>
+                <div className="text-xs text-[#666666] font-medium">
+                  Average Package
+                </div>
+              </div>
+              <div className="font-bold hover:underline hover:cursor-pointer">
+                <div className="text-[#3EAE8D] text-base font-bold ">
+                  <span>₹ </span>
+                  <span>
+                    {college?.placement?.highest_salary
+                      ? formatIndianNumber(college?.placement?.highest_salary)
+                      : "N/A"}
+                  </span>
+                </div>
+                <div className="text-xs text-[#666666] font-medium">
+                  Highest Package
+                </div>
+              </div>
+              <button className="flex gap-1 text-xs text-[#ff7900]">
+                <span>
+                  <Icon
+                    icon="fluent:arrow-swap-16-filled"
+                    width="20"
+                    height="20"
+                  />
+                </span>
+                <span>Compare Fees</span>
+              </button>
+            </td>
 
             {/*User Reviews*/}
-            <td className=" p-3 border-r-[1px] border-r-[#dedede]"></td>
+            <td className=" p-3 border-r-[1px] border-r-[#dedede] align-top space-y-3">
+              <div className="flex gap-2">
+                <span className="bg-orange-400 rounded-full w-2 h-2 inline-block self-center"></span>
+                <span className="flex gap-1 text-[#666666]">
+                  <span>{college?.reviewsData?.avgRating ?? "N/A"}</span>
+                  <span>/</span>
+                  <span>5</span>
+                </span>
+              </div>
+              <div className="text-xs text-[#666666] font-medium">
+                <div className="flex gap-1 flex-wrap">
+                  <span>Based on</span>
+                  <span>
+                    {college?.reviewsData?.userReviewsData?.total_student ??
+                      "N/A"}
+                  </span>
+                  <span>User</span>
+                </div>
+                <div>Reviews</div>
+              </div>
+              <div
+                className=" w-max border-l-2 border-[#FF7900] py-2 pl-1 pr-10 bg-[#FFF8E4] flex gap-2 text-xs text-[#C86C80]"
+                style={{
+                  //   clipPath:
+                  //     "polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%)",
+                  clipPath:
+                    "polygon(0% 0%, 85% 0%, 100% 40%, 85% 100%, 0% 100%)",
+                }}
+              >
+                <span><Icon icon="oui:arrow-down" width="20" height="20" /></span>
+                <span >
+                  {college?.tagline?? "N/A"}
+                </span>
+                <span>
+                <Icon icon="mdi:tick" width="20" height="20" />
+                </span>
+              </div>
+            </td>
 
             {/*Ranking*/}
             <td className=" p-3 border-r-[1px] border-r-[#dedede]"></td>
