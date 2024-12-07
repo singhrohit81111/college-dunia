@@ -20,7 +20,11 @@ function Home() {
           colleges.length,
           colleges.length + 10
         );
-        console.log(slicedColleges, "triggered");
+        if(slicedColleges.length===0){
+          observerRef.current.disconnect()
+          return;
+        }
+        console.log(slicedColleges.length, "triggered");
         setColleges((prevColleges) => [...prevColleges, ...slicedColleges]);
       }, 1 * 1000);
     }
