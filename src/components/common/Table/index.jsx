@@ -28,13 +28,14 @@ function Table() {
 
       {/*Table Body*/}
       <tbody>
-        {colleges?.map((college) => (
+        {colleges?.map((college,index) => (
           <tr key={college?.college_id} className="border-b border-gray-300" >
             {/*Rank*/}
             <td className="text-base font-medium p-3 border-r-[1px] border-r-[#dedede]">
               <span>#</span>
               <span>
-                {college?.rankingData?.[0]?.rankingOfCollege ?? "N'A"}
+                {/* {college?.rankingData?.[0]?.rankingOfCollege ?? "N'A"} */}
+                {index+1}
               </span>
             </td>
 
