@@ -16,17 +16,23 @@ function Home() {
   useEffect(() => {
     function loadData() {
       setTimeout(() => {
-        const slicedColleges = data.slice(colleges.length, colleges.length + 10);
+        const slicedColleges = data.slice(
+          colleges.length,
+          colleges.length + 10
+        );
         console.log(slicedColleges, "triggered");
-        setColleges(prevColleges=>([...prevColleges,...slicedColleges]));
-      }, 3 * 1000);
+        setColleges((prevColleges) => [...prevColleges, ...slicedColleges]);
+      }, 1 * 1000);
     }
 
+    {
+      /* Instance of intersection observer */
+    }
     observerRef.current = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-              loadData();
+            loadData();
             console.log("hii");
           }
         });
