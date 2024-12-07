@@ -299,7 +299,7 @@
               "name": "Reviews",
               "tooltip": " - Reviews "
             },
-            "courses-fees": {
+            "coursesFees": {
               "name": "Courses & Fees",
               "tooltip": " - Course & Fees Details "
             },
@@ -668,7 +668,7 @@
               "name": "Reviews",
               "tooltip": " - Reviews "
             },
-            "courses-fees": {
+            "coursesFees": {
               "name": "Courses & Fees",
               "tooltip": " - Course & Fees Details "
             },
@@ -1011,7 +1011,7 @@
               "name": "Reviews",
               "tooltip": " - Reviews "
             },
-            "courses-fees": {
+            "coursesFees": {
               "name": "Courses & Fees",
               "tooltip": " - Course & Fees Details "
             },
@@ -1450,7 +1450,7 @@
               "name": "Reviews",
               "tooltip": " - Reviews "
             },
-            "courses-fees": {
+            "coursesFees": {
               "name": "Courses & Fees",
               "tooltip": " - Course & Fees Details "
             },
@@ -1761,7 +1761,7 @@
               "name": "Reviews",
               "tooltip": " - Reviews "
             },
-            "courses-fees": {
+            "coursesFees": {
               "name": "Courses & Fees",
               "tooltip": " - Course & Fees Details "
             },
@@ -2123,7 +2123,7 @@
               "name": "Reviews",
               "tooltip": " - Reviews "
             },
-            "courses-fees": {
+            "coursesFees": {
               "name": "Courses & Fees",
               "tooltip": " - Course & Fees Details "
             },
@@ -2295,7 +2295,7 @@
               "name": "Reviews",
               "tooltip": " - Reviews "
             },
-            "courses-fees": {
+            "coursesFees": {
               "name": "Courses & Fees",
               "tooltip": " - Course & Fees Details "
             },
@@ -2627,7 +2627,7 @@
               "name": "Reviews",
               "tooltip": " - Reviews "
             },
-            "courses-fees": {
+            "coursesFees": {
               "name": "Courses & Fees",
               "tooltip": " - Course & Fees Details "
             },
@@ -2980,7 +2980,7 @@
               "name": "Reviews",
               "tooltip": " - Reviews "
             },
-            "courses-fees": {
+            "coursesFees": {
               "name": "Courses & Fees",
               "tooltip": " - Course & Fees Details "
             },
@@ -3135,7 +3135,7 @@
               "name": "Reviews",
               "tooltip": " - Reviews "
             },
-            "courses-fees": {
+            "coursesFees": {
               "name": "Courses & Fees",
               "tooltip": " - Course & Fees Details "
             },
@@ -3463,7 +3463,7 @@
               "name": "Reviews",
               "tooltip": " - Reviews "
             },
-            "courses-fees": {
+            "coursesFees": {
               "name": "Courses & Fees",
               "tooltip": " - Course & Fees Details "
             },
@@ -3845,7 +3845,7 @@
               "name": "Reviews",
               "tooltip": " - Reviews "
             },
-            "courses-fees": {
+            "coursesFees": {
               "name": "Courses & Fees",
               "tooltip": " - Course & Fees Details "
             },
@@ -4077,7 +4077,7 @@
               "name": "Reviews",
               "tooltip": " - Reviews "
             },
-            "courses-fees": {
+            "coursesFees": {
               "name": "Courses & Fees",
               "tooltip": " - Course & Fees Details "
             },
@@ -4386,7 +4386,7 @@
               "name": "Reviews",
               "tooltip": " - Reviews "
             },
-            "courses-fees": {
+            "coursesFees": {
               "name": "Courses & Fees",
               "tooltip": " - Course & Fees Details "
             },
@@ -4771,7 +4771,7 @@
               "name": "Reviews",
               "tooltip": " - Reviews "
             },
-            "courses-fees": {
+            "coursesFees": {
               "name": "Courses & Fees",
               "tooltip": " - Course & Fees Details "
             },
@@ -5172,7 +5172,7 @@
               "name": "Reviews",
               "tooltip": " - Reviews "
             },
-            "courses-fees": {
+            "coursesFees": {
               "name": "Courses & Fees",
               "tooltip": " - Course & Fees Details "
             },
@@ -5592,7 +5592,7 @@
               "name": "Reviews",
               "tooltip": " - Reviews "
             },
-            "courses-fees": {
+            "coursesFees": {
               "name": "Courses & Fees",
               "tooltip": " - Course & Fees Details "
             },
@@ -5883,7 +5883,7 @@
               "name": "Reviews",
               "tooltip": " - Reviews "
             },
-            "courses-fees": {
+            "coursesFees": {
               "name": "Courses & Fees",
               "tooltip": " - Course & Fees Details "
             },
@@ -6050,7 +6050,7 @@
               "name": "Reviews",
               "tooltip": " - Reviews "
             },
-            "courses-fees": {
+            "coursesFees": {
               "name": "Courses & Fees",
               "tooltip": " - Course & Fees Details "
             },
@@ -6381,7 +6381,7 @@
               "name": "Reviews",
               "tooltip": " - Reviews "
             },
-            "courses-fees": {
+            "coursesFees": {
               "name": "Courses & Fees",
               "tooltip": " - Course & Fees Details "
             },
@@ -6684,7 +6684,7 @@
               "name": "Reviews",
               "tooltip": " - Reviews "
             },
-            "courses-fees": {
+            "coursesFees": {
               "name": "Courses & Fees",
               "tooltip": " - Course & Fees Details "
             },
@@ -7027,7 +7027,7 @@
               "name": "Reviews",
               "tooltip": " - Reviews "
             },
-            "courses-fees": {
+            "coursesFees": {
               "name": "Courses & Fees",
               "tooltip": " - Course & Fees Details "
             },
@@ -7349,7 +7349,7 @@
               "name": "Reviews",
               "tooltip": " - Reviews "
             },
-            "courses-fees": {
+            "coursesFees": {
               "name": "Courses & Fees",
               "tooltip": " - Course & Fees Details "
             },
@@ -7601,7 +7601,7 @@
               "name": "Reviews",
               "tooltip": " - Reviews "
             },
-            "courses-fees": {
+            "coursesFees": {
               "name": "Courses & Fees",
               "tooltip": " - Course & Fees Details "
             },
@@ -7875,7 +7875,7 @@
               "name": "Reviews",
               "tooltip": " - Reviews "
             },
-            "courses-fees": {
+            "coursesFees": {
               "name": "Courses & Fees",
               "tooltip": " - Course & Fees Details "
             },
@@ -8198,7 +8198,7 @@
               "name": "Reviews",
               "tooltip": " - Reviews "
             },
-            "courses-fees": {
+            "coursesFees": {
               "name": "Courses & Fees",
               "tooltip": " - Course & Fees Details "
             },
@@ -8567,7 +8567,7 @@
               "name": "Reviews",
               "tooltip": " - Reviews "
             },
-            "courses-fees": {
+            "coursesFees": {
               "name": "Courses & Fees",
               "tooltip": " - Course & Fees Details "
             },
@@ -8794,7 +8794,7 @@
               "name": "Reviews",
               "tooltip": " - Reviews "
             },
-            "courses-fees": {
+            "coursesFees": {
               "name": "Courses & Fees",
               "tooltip": " - Course & Fees Details "
             },
@@ -9157,7 +9157,7 @@
               "name": "Reviews",
               "tooltip": " - Reviews "
             },
-            "courses-fees": {
+            "coursesFees": {
               "name": "Courses & Fees",
               "tooltip": " - Course & Fees Details "
             },
@@ -9455,7 +9455,7 @@
               "name": "Reviews",
               "tooltip": " - Reviews "
             },
-            "courses-fees": {
+            "coursesFees": {
               "name": "Courses & Fees",
               "tooltip": " - Course & Fees Details "
             },
