@@ -1,18 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { TABLE_HEADINGS } from "@config/constants";
 import { IMAGE_URL, RANKING_IMAGE_URL } from "@config/constants";
 import { Icon } from "@iconify/react";
 import formatIndianNumber from "@utils/fomats.utils";
-import data from '@config/data.json'
 
-
-function Table() {
-    const[colleges,setColleges]=useState([]);
-    useEffect(()=>{
-        const slicedColleges=data.slice(0,10);
-        console.log(slicedColleges,"slice");
-        setColleges(slicedColleges)
-    },[])
+function Table({colleges}) {
   return (
     <table className="w-full border-[1px] border-[#dedede]">
       {/*Table Head*/}
@@ -28,14 +20,14 @@ function Table() {
 
       {/*Table Body*/}
       <tbody>
-        {colleges?.map((college,index) => (
-          <tr key={college?.college_id} className="border-b border-gray-300" >
+        {colleges?.map((college, index) => (
+          <tr key={college?.college_id} className="border-b border-gray-300">
             {/*Rank*/}
             <td className="text-base font-medium p-3 border-r-[1px] border-r-[#dedede]">
               <span>#</span>
               <span>
                 {/* {college?.rankingData?.[0]?.rankingOfCollege ?? "N'A"} */}
-                {index+1}
+                {index + 1}
               </span>
             </td>
 
@@ -274,18 +266,34 @@ function Table() {
               >
                 <span className="flex">
                   <span className="text-left">
-                    <img src={IMAGE_URL} alt="college-image" loading="lazy" height={25} width={25}/>
+                    <img
+                      src={IMAGE_URL}
+                      alt="college-image"
+                      loading="lazy"
+                      height={25}
+                      width={25}
+                    />
                   </span>
                   <span className="text-left -ml-[5px]">
-                    <img src={IMAGE_URL} alt="college-image" loading="lazy" height={25} width={25}/>
+                    <img
+                      src={IMAGE_URL}
+                      alt="college-image"
+                      loading="lazy"
+                      height={25}
+                      width={25}
+                    />
                   </span>
                   <span className="text-left -ml-[5px]">
-                    <img src={IMAGE_URL} alt="college-image" loading="lazy" height={25} width={25}/>
+                    <img
+                      src={IMAGE_URL}
+                      alt="college-image"
+                      loading="lazy"
+                      height={25}
+                      width={25}
+                    />
                   </span>
                 </span>
-                <span className="text-sm self-center">
-                  + 9 More
-                </span>
+                <span className="text-sm self-center">+ 9 More</span>
               </div>
             </td>
           </tr>
