@@ -1,11 +1,25 @@
 import React, { useEffect, useRef, useState } from "react";
 import Table from "@components/common/Table";
 import data from "@config/data.json";
+import RadioButtonGroup from "@components/common/RadioButtonGroup";
+import { RADIO_OPTIONS } from "@config/constants";
+import SearchInput from "@components/common/SearchInput";
 
 function Home() {
   const [colleges, setColleges] = useState([]);
+  const [selectedValue, setSelectedValue] = useState("cdRanking");
+  const [searchQuery, setSearchQuery] = useState("");
   const targetRef = useRef(null);
   const observerRef = useRef();
+
+  const handleSearchChange = (value) => {
+    setSearchQuery(value);
+    console.log("Search value:", value);
+  };
+
+  const handleRadioChange = (value) => {
+    setSelectedValue(value);
+  };
 
   useEffect(() => {
     const slicedColleges = data.slice(0, colleges.length + 10);
@@ -20,8 +34,8 @@ function Home() {
           colleges.length,
           colleges.length + 10
         );
-        if(slicedColleges.length===0){
-          observerRef.current.disconnect()
+        if (slicedColleges.length === 0) {
+          observerRef.current.disconnect();
           return;
         }
         console.log(slicedColleges.length, "triggered");
@@ -50,12 +64,41 @@ function Home() {
     return () => observerRef.current.disconnect();
   }, [colleges]);
   return (
-    <main className="w-screen">
-      <section className="p-6">
-        <Table colleges={colleges} />
-      </section>
-      <section ref={targetRef} />
-    </main>
+    <>
+      <nav className="mx-6 mt-6 pb-2 flex justify-between border-b border-gray-300">
+        <div>Hello</div>
+        <div className="flex gap-3">
+          <div className="self-center">
+            <SearchInput
+              value={searchQuery}
+              onChange={handleSearchChange}
+              placeholder="Type to search..."
+            />
+          </div>
+          <div className="self-center flex gap-2">
+          <div className="font-bold	">Sort By</div>
+            <RadioButtonGroup
+              options={RADIO_OPTIONS}
+              selectedValue={selectedValue}
+              onChange={handleRadioChange}
+            />
+          </div>
+        </div>
+      </nav>
+
+      <main className="w-screen">
+        {/* <RadioButtonGroup
+        options={RADIO_OPTIONS}
+        selectedValue={selectedValue}
+        onChange={handleRadioChange}
+      /> */}
+
+        <section className="m-6">
+          <Table colleges={colleges} />
+        </section>
+        <section ref={targetRef} />
+      </main>
+    </>
   );
 }
 
