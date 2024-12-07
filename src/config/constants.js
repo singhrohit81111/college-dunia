@@ -1,0 +1,1 @@
+export const TABLE_HEADINGS=['CD Rank','Collges','Course Fees','Placement','User Reviews','Rankings']

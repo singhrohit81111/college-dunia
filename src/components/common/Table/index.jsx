@@ -1,9 +1,18 @@
-import React from 'react'
+import React from "react";
+import { TABLE_HEADINGS } from "@config/constants";
 
 function Table() {
   return (
-    <div>Table</div>
-  )
+    <table className="w-full ">
+      <thead className="bg-[#FFFFFF]">
+        <tr>
+          {TABLE_HEADINGS.map((tableHeading) => (
+            <th className="col-span-3">{tableHeading}</th>
+          ))}
+        </tr>
+      </thead>
+    </table>
+  );
 }
 
-export default Table
+export default Table;
