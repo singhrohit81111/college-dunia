@@ -3,7 +3,7 @@ import { TABLE_HEADINGS } from "@config/constants";
 import { IMAGE_URL, RANKING_IMAGE_URL } from "@config/constants";
 import { Icon } from "@iconify/react";
 import formatIndianNumber from "@utils/fomats.utils";
-import data from '../../../config/data.json'
+import data from '@config/data.json'
 
 
 function Table() {
