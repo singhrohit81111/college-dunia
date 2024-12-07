@@ -1,8 +1,8 @@
 import React from "react";
 import { TABLE_HEADINGS } from "@config/constants";
-import { IMAGE_URL } from "../../../config/constants";
+import { IMAGE_URL, RANKING_IMAGE_URL } from "@config/constants";
 import { Icon } from "@iconify/react";
-import formatIndianNumber from "../../../utils/fomats.utils";
+import formatIndianNumber from "@utils/fomats.utils";
 
 const COLLEGES = [
   {
@@ -555,7 +555,7 @@ function Table() {
                 <div>Reviews</div>
               </div>
               <div
-                className=" w-max border-l-2 border-[#FF7900] py-2 pl-1 pr-10 bg-[#FFF8E4] flex gap-2 text-xs text-[#C86C80]"
+                className=" w-max border-l-2 border-[#FF7900] py-2 pl-1 pr-10 bg-[#FFF8E4] flex gap-2 text-xs text-[#C86C80] hover:cursor-pointer"
                 style={{
                   //   clipPath:
                   //     "polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%)",
@@ -563,18 +563,80 @@ function Table() {
                     "polygon(0% 0%, 85% 0%, 100% 40%, 85% 100%, 0% 100%)",
                 }}
               >
-                <span><Icon icon="oui:arrow-down" width="20" height="20" /></span>
-                <span >
-                  {college?.tagline?? "N/A"}
-                </span>
                 <span>
-                <Icon icon="mdi:tick" width="20" height="20" />
+                  <Icon icon="oui:arrow-down" width="20" height="20" />
+                </span>
+                <span>{college?.tagline ?? "N/A"}</span>
+                <span>
+                  <Icon icon="mdi:tick" width="20" height="20" />
                 </span>
               </div>
             </td>
 
             {/*Ranking*/}
-            <td className=" p-3 border-r-[1px] border-r-[#dedede]"></td>
+            <td className=" p-3 border-r-[1px] border-r-[#dedede] align-top space-y-3">
+              <div className="flex gap-2 hover:cursor-pointer">
+                <span className="flex gap-1 text-[#666666]">
+                  <span>#</span>
+                  <span>
+                    <span>
+                      {college?.rankingData?.[0]?.rankingOfCollege ?? "N/A"}
+                    </span>
+                    <span>
+                      <sup>th</sup>
+                    </span>
+                  </span>
+
+                  <span>/</span>
+                  <span className="text-[#ff7900]">
+                    {college?.rankingData?.[0]?.rankingOutOfTotalNoOfCollege ??
+                      "N/A"}
+                  </span>
+                  <span>in India</span>
+                </span>
+              </div>
+
+              <div className="text-xs text-[#666666] font-medium hover:cursor-pointer">
+                <div className="flex gap-1 flex-wrap ">
+                  <span>
+                    <img
+                      src={RANKING_IMAGE_URL}
+                      alt="ranking-iamge"
+                      loading="lazy"
+                      height={50}
+                      width={50}
+                      className="grayscale"
+                    />
+                  </span>
+                  <span className="text-base">2025</span>
+                </div>
+              </div>
+
+              <div
+                className=" w-max border-l-2 border-l-[#42AEE8] py-2 pl-1 pr-10 bg-[#EAF9FE] flex gap-2 text-xs text-[#C86C80] hover:cursor-pointer"
+                style={{
+                  //   clipPath:
+                  //     "polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%)",
+                  clipPath:
+                    "polygon(0% 0%, 85% 0%, 100% 40%, 85% 100%, 0% 100%)",
+                }}
+              >
+                <span className="flex">
+                  <span className="text-left">
+                    <img src={IMAGE_URL} alt="college-image" loading="lazy" height={25} width={25}/>
+                  </span>
+                  <span className="text-left -ml-[5px]">
+                    <img src={IMAGE_URL} alt="college-image" loading="lazy" height={25} width={25}/>
+                  </span>
+                  <span className="text-left -ml-[5px]">
+                    <img src={IMAGE_URL} alt="college-image" loading="lazy" height={25} width={25}/>
+                  </span>
+                </span>
+                <span className="text-sm self-center">
+                  + 9 More
+                </span>
+              </div>
+            </td>
           </tr>
         ))}
       </tbody>
