@@ -12,6 +12,7 @@ function Home() {
   const targetRef = useRef(null);
   const observerRef = useRef();
 
+  {/* TO HANDLE SEACRH */}
   const handleSearchChange = (value) => {
     setSearchQuery(value);
     if (!value.trim()) {
@@ -27,6 +28,7 @@ function Home() {
     }
   };
 
+    {/* TO HANDLE RADIO FILTERS */}
   const handleRadioChange = (value) => {
     setSelectedValue(value);
     switch (value) {
@@ -56,12 +58,15 @@ function Home() {
     }
   };
 
+    {/* SETS STATE ON 1ST RENDER */}
   useEffect(() => {
     const slicedColleges = data.slice(0, colleges.length + 10);
     console.log(slicedColleges, "slice");
     setColleges(slicedColleges);
   }, []);
 
+
+    {/* TO OBSERVE MUTATION OF INTERSECTION OBSERVER */}
   useEffect(() => {
     function loadData() {
       setTimeout(() => {
