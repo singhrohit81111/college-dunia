@@ -12,21 +12,61 @@ function Home() {
   const targetRef = useRef(null);
   const observerRef = useRef();
 
+  {/* TO HANDLE SEACRH */}
   const handleSearchChange = (value) => {
     setSearchQuery(value);
-    console.log("Search value:", value);
+    if (!value.trim()) {
+      console.log("truthy");
+      setColleges(data.slice(0, 10));
+      observerRef.current.observe(targetRef.current);
+    } else {
+      const searchedColleges = colleges?.filter((college) =>
+        college?.college_name.toLowerCase().includes(value.toLowerCase())
+      );
+      setColleges(searchedColleges);
+      console.log(searchedColleges, "clg");
+    }
   };
 
+    {/* TO HANDLE RADIO FILTERS */}
   const handleRadioChange = (value) => {
     setSelectedValue(value);
+    switch (value) {
+      case "reviews": {
+        console.log("reviews");
+        setColleges((prevColleges) =>
+          prevColleges.sort(
+            (a, b) => a?.reviewsData?.avgRating - b?.reviewsData?.avgRating
+          )
+        );
+        break;
+      }
+      case "highestFees": {
+        console.log("hFees");
+        setColleges((prevColleges) =>
+          prevColleges.sort((a, b) => b?.fees?.[0]?.fee - a?.fees?.[0]?.fee)
+        );
+        break;
+      }
+      case "lowestFees": {
+        console.log("lFees");
+        setColleges((prevColleges) =>
+          prevColleges.sort((a, b) => a?.fees?.[0]?.fee - b?.fees?.[0]?.fee)
+        );
+        break;
+      }
+    }
   };
 
+    {/* SETS STATE ON 1ST RENDER */}
   useEffect(() => {
     const slicedColleges = data.slice(0, colleges.length + 10);
     console.log(slicedColleges, "slice");
     setColleges(slicedColleges);
   }, []);
 
+
+    {/* TO OBSERVE MUTATION OF INTERSECTION OBSERVER */}
   useEffect(() => {
     function loadData() {
       setTimeout(() => {
@@ -39,7 +79,38 @@ function Home() {
           return;
         }
         console.log(slicedColleges.length, "triggered");
-        setColleges((prevColleges) => [...prevColleges, ...slicedColleges]);
+        // setColleges((prevColleges) => [...prevColleges, ...slicedColleges]);
+
+        console.log(selectedValue, "value");
+
+        setColleges((prevColleges) => {
+          // Combine existing colleges with new ones
+          const updatedColleges = [...prevColleges, ...slicedColleges];
+          console.log(updatedColleges, "uclg", selectedValue);
+          // Sorting logic based on selectedValue
+          switch (selectedValue) {
+            case "reviews":
+              console.log("reviews");
+              return updatedColleges.sort(
+                (a, b) => a?.reviewsData?.avgRating - b?.reviewsData?.avgRating
+              );
+
+            case "highestFees":
+              console.log("hFees");
+              return updatedColleges.sort(
+                (a, b) => b?.fees?.[0]?.fee - a?.fees?.[0]?.fee
+              );
+
+            case "lowestFees":
+              console.log("lFees");
+              return updatedColleges.sort(
+                (a, b) => a?.fees?.[0]?.fee - b?.fees?.[0]?.fee
+              );
+
+            default:
+              return updatedColleges; // No sorting for default case
+          }
+        });
       }, 1 * 1000);
     }
 
@@ -50,7 +121,12 @@ function Home() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            loadData();
+            if (colleges.length >= 10) {
+              loadData();
+              console.log("hii");
+            } else {
+              observerRef.current.unobserve(targetRef.current);
+            }
             console.log("hii");
           }
         });
@@ -62,11 +138,12 @@ function Home() {
       observerRef.current.observe(targetRef.current);
     }
     return () => observerRef.current.disconnect();
-  }, [colleges]);
+  }, [colleges, selectedValue]);
+
   return (
     <>
       <nav className="mx-6 mt-6 pb-2 flex justify-between border-b border-gray-300">
-        <div>Hello</div>
+        <div className="text-[#333] text-xl font-bold self-centers">{`Found ${data.length} Colleges`}</div>
         <div className="flex gap-3">
           <div className="self-center">
             <SearchInput
@@ -76,7 +153,7 @@ function Home() {
             />
           </div>
           <div className="self-center flex gap-2">
-          <div className="font-bold	">Sort By</div>
+            <div className="font-bold	">Sort By</div>
             <RadioButtonGroup
               options={RADIO_OPTIONS}
               selectedValue={selectedValue}
@@ -87,12 +164,6 @@ function Home() {
       </nav>
 
       <main className="w-screen">
-        {/* <RadioButtonGroup
-        options={RADIO_OPTIONS}
-        selectedValue={selectedValue}
-        onChange={handleRadioChange}
-      /> */}
-
         <section className="m-6">
           <Table colleges={colleges} />
         </section>
