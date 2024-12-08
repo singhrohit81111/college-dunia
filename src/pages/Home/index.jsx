@@ -81,7 +81,7 @@ function Home() {
   return (
     <>
       <nav className="mx-6 mt-6 pb-2 flex justify-between border-b border-gray-300">
-        <div>Hello</div>
+        <div className="text-[#333] text-xl font-bold self-center">{`Found ${data.length} Colleges`}</div>
         <div className="flex gap-3">
           <div className="self-center">
             <SearchInput
