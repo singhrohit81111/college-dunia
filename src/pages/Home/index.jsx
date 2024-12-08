@@ -14,7 +14,15 @@ function Home() {
 
   const handleSearchChange = (value) => {
     setSearchQuery(value);
-    console.log("Search value:", value);
+    if (!value.trim()) {
+      console.log("truthy");
+      setColleges(data.slice(0,10));
+      observerRef.current.observe(targetRef.current);
+    }
+    else{
+      setColleges(searchedColleges);
+      console.log(searchedColleges,"clg");
+    }
   };
 
   const handleRadioChange = (value) => {
@@ -50,7 +58,12 @@ function Home() {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            loadData();
+            if (colleges.length >=10 ){
+              loadData();
+              console.log("hii");
+            } else {
+              observerRef.current.unobserve(targetRef.current);
+            }
             console.log("hii");
           }
         });
@@ -61,6 +74,7 @@ function Home() {
     if (targetRef.current) {
       observerRef.current.observe(targetRef.current);
     }
+    console.log("test");
     return () => observerRef.current.disconnect();
   }, [colleges]);
   return (
@@ -76,7 +90,7 @@ function Home() {
             />
           </div>
           <div className="self-center flex gap-2">
-          <div className="font-bold	">Sort By</div>
+            <div className="font-bold	">Sort By</div>
             <RadioButtonGroup
               options={RADIO_OPTIONS}
               selectedValue={selectedValue}
@@ -87,12 +101,6 @@ function Home() {
       </nav>
 
       <main className="w-screen">
-        {/* <RadioButtonGroup
-        options={RADIO_OPTIONS}
-        selectedValue={selectedValue}
-        onChange={handleRadioChange}
-      /> */}
-
         <section className="m-6">
           <Table colleges={colleges} />
         </section>
