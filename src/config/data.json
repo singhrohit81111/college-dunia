@@ -1,5 +1,6 @@
 [
   {
+    "featured":true,
     "college_id": "25881",
     "college_name": "IIT Madras - Indian Institute of Technology - [IITM]",
     "college_short_form": "IIT Madras",
@@ -353,6 +354,7 @@
     "distance": null
   },
   {
+    "featured":false,
     "college_id": "25455",
     "college_name": "IIT Delhi - Indian Institute of Technology [IITD]",
     "college_short_form": "IIT Delhi",
@@ -725,6 +727,7 @@
     "distance": null
   },
   {
+    "featured":false,
     "college_id": "25703",
     "college_name": "IIT Bombay - Indian Institute of Technology - [IITB]",
     "college_short_form": "IIT Bombay",
@@ -1064,6 +1067,7 @@
     "distance": null
   },
   {
+    "featured":false,
     "college_id": "26007",
     "college_name": "IIT Kharagpur - Indian Institute of Technology - [IITKGP]",
     "college_short_form": "IIT Kharagpur",
@@ -1501,6 +1505,7 @@
     "distance": null
   },
   {
+    "featured":true,
     "college_id": "25948",
     "college_name": "IIT Kanpur - Indian Institute of Technology - [IITK]",
     "college_short_form": "IIT Kanpur",
@@ -1804,6 +1809,7 @@
     "distance": null
   },
   {
+    "featured":false,
     "college_id": "25992",
     "college_name": "IIT Roorkee - Indian Institute of Technology - [IITR]",
     "college_short_form": "IIT Roorkee",
@@ -2166,6 +2172,7 @@
     "distance": null
   },
   {
+    "featured":false,
     "college_id": "25800",
     "college_name": "BITS Pilani (Pilani Campus)",
     "college_short_form": "BITS Pilani",
@@ -2335,6 +2342,7 @@
     "distance": null
   },
   {
+    "featured":false,
     "college_id": "25396",
     "college_name": "IIT Guwahati - Indian Institute of Technology - [IITG]",
     "college_short_form": "IIT Guwahati",
@@ -2662,6 +2670,7 @@
     "distance": null
   },
   {
+    "featured":false,
     "college_id": "25356",
     "college_name": "IIT Hyderabad - Indian Institute of Technology - [IITH]",
     "college_short_form": "IIT Hyderabad",
@@ -3010,6 +3019,7 @@
     "distance": null
   },
   {
+    "featured":false,
     "college_id": "28261",
     "college_name": "College of Engineering, Anna University - [CEG]",
     "college_short_form": "",
@@ -3163,6 +3173,7 @@
     "distance": null
   },
   {
+    "featured":true,
     "college_id": "25889",
     "college_name": "NIT Trichy",
     "college_short_form": "NIT Trichy",
@@ -3487,6 +3498,7 @@
     "distance": null
   },
   {
+    "featured":false,
     "college_id": "25947",
     "college_name": "IIT BHU - Indian Institute of Technology",
     "college_short_form": "IIT BHU",
@@ -3867,6 +3879,7 @@
     "distance": null
   },
   {
+    "featured":false,
     "college_id": "25705",
     "college_name": "Institute of Chemical Technology - [ICT]",
     "college_short_form": "ICT Mumbai",
@@ -4094,6 +4107,7 @@
     "distance": null
   },
   {
+    "featured":false,
     "college_id": "25666",
     "college_name": "IIT Indore - Indian Institute of Technology - [IITI]",
     "college_short_form": "IIT Indore",
@@ -4401,6 +4415,7 @@
     "distance": null
   },
   {
+    "featured":false,
     "college_id": "26008",
     "college_name": "Jadavpur University - [JU]",
     "college_short_form": "Jadavpur University",
@@ -4791,6 +4806,7 @@
     "distance": null
   },
   {
+    "featured":true,
     "college_id": "25581",
     "college_name": "ISM Dhanbad - Indian Institute of Technology - [IITISM]",
     "college_short_form": "IIT Dhanbad",
@@ -5184,6 +5200,7 @@
     "distance": null
   },
   {
+    "featured":false,
     "college_id": "24260",
     "college_name": "National Institute of Technology - [NIT]",
     "college_short_form": "NIT Rourkela",
@@ -5601,6 +5618,7 @@
     "distance": null
   },
   {
+    "featured":false,
     "college_id": "25759",
     "college_name": "IIT Bhubaneswar - Indian Institute of Technology - [IITBBS]",
     "college_short_form": "IIT Bhubaneswar",
@@ -5884,6 +5902,7 @@
     "distance": null
   },
   {
+    "featured":true,
     "college_id": "25914",
     "college_name": "Vellore Institute of Technology - [VIT University]",
     "college_short_form": "VIT Vellore",
@@ -6053,6 +6072,7 @@
     "distance": null
   },
   {
+    "featured":true,
     "college_id": "28330",
     "college_name": "Indian Institute of Engineering Science and Technology - [IIEST] Shibpur",
     "college_short_form": "IIEST Shibpur",
@@ -6378,6 +6398,7 @@
     "distance": null
   },
   {
+    "featured":false,
     "college_id": "25559",
     "college_name": "IIT Mandi- Indian Institute of Technology - [IITM]",
     "college_short_form": "IIT Mandi",
@@ -6679,6 +6700,7 @@
     "distance": null
   },
   {
+    "featured":false,
     "college_id": "25620",
     "college_name": "National Institute of Technology - [NITK]",
     "college_short_form": "NIT Surathkal",
@@ -7023,6 +7045,7 @@
     "distance": null
   },
   {
+    "featured":false,
     "college_id": "25409",
     "college_name": "IIT Patna - Indian Institute of Technology - [IITP]",
     "college_short_form": "IIT Patna",
@@ -7339,6 +7362,7 @@
     "distance": null
   },
   {
+    "featured":false,
     "college_id": "25795",
     "college_name": "Thapar Institute of Engineering and Technology - [Thapar University]",
     "college_short_form": "Thapar University",
@@ -7595,6 +7619,7 @@
     "distance": null
   },
   {
+    "featured":true,
     "college_id": "25495",
     "college_name": "IIT Gandhinagar - Indian Institute of Technology - [IITG]",
     "college_short_form": "IIT Gandhinagar",
@@ -7859,6 +7884,7 @@
     "distance": null
   },
   {
+    "featured":false,
     "college_id": "25367",
     "college_name": "NIT Warangal",
     "college_short_form": "NIT Warangal",
@@ -8185,6 +8211,7 @@
     "distance": null
   },
   {
+    "featured":false,
     "college_id": "25449",
     "college_name": "Delhi Technological University - [DTU]",
     "college_short_form": "DTU",
@@ -8555,6 +8582,7 @@
     "distance": null
   },
   {
+    "featured":false,
     "college_id": "25460",
     "college_name": "Jamia Millia Islamia University-[JMI]",
     "college_short_form": "Jamia Millia Islamia",
@@ -8785,6 +8813,7 @@
     "distance": null
   },
   {
+    "featured":false,
     "college_id": "25651",
     "college_name": "National Institute of Technology - [NITC]",
     "college_short_form": "NIT Calicut",
@@ -9132,6 +9161,7 @@
     "distance": null
   },
   {
+    "featured":false,
     "college_id": "25786",
     "college_name": "IIT Ropar - Indian Institute of Technology - [IITR]",
     "college_short_form": "IIT Ropar",
