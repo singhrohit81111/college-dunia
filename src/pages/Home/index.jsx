@@ -20,6 +20,7 @@ function Home() {
       observerRef.current.observe(targetRef.current);
     }
     else{
+      const searchedColleges=colleges?.filter(college=>(college?.college_name.toLowerCase().includes(value.toLowerCase())));
       setColleges(searchedColleges);
       console.log(searchedColleges,"clg");
     }
