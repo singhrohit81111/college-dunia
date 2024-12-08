@@ -727,7 +727,7 @@
     "distance": null
   },
   {
-    "featured":false,
+    "featured":true,
     "college_id": "25703",
     "college_name": "IIT Bombay - Indian Institute of Technology - [IITB]",
     "college_short_form": "IIT Bombay",
