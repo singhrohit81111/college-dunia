@@ -3,8 +3,9 @@ import { TABLE_HEADINGS } from "@config/constants";
 import { IMAGE_URL, RANKING_IMAGE_URL } from "@config/constants";
 import { Icon } from "@iconify/react";
 import formatIndianNumber from "@utils/fomats.utils";
+import { FEATURED_IMAGE_URL } from "../../../config/constants";
 
-function Table({colleges}) {
+function Table({ colleges }) {
   return (
     <table className="w-full border-[1px] border-[#dedede]">
       {/*Table Head*/}
@@ -21,7 +22,7 @@ function Table({colleges}) {
       {/*Table Body*/}
       <tbody>
         {colleges?.map((college, index) => (
-          <tr key={college?.college_id} className="border-b border-gray-300">
+          <tr key={college?.college_id} className="border-b border-gray-300 ">
             {/*Rank*/}
             <td className="text-base font-medium p-3 border-r-[1px] border-r-[#dedede]">
               <span>#</span>
@@ -32,7 +33,21 @@ function Table({colleges}) {
             </td>
 
             {/*Colleges*/}
-            <td className=" p-3 border-r-[1px] border-r-[#dedede] w-1/3">
+            <td className=" p-3 border-r-[1px] border-r-[#dedede] w-1/3 relative">
+              {/*Featured tag*/}
+              {college?.featured && (
+                <div className="absolute -top-1">
+                  <img
+                    src={FEATURED_IMAGE_URL}
+                    alt="featured-image"
+                    loading="lazy"
+                  />
+                  <div className=" z-100 text-xs absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-white">
+                    Featured
+                  </div>
+                </div>
+              )}
+
               <div className="flex gap-2">
                 <span className="text-left">
                   <img src={IMAGE_URL} alt="college-image" loading="lazy" />

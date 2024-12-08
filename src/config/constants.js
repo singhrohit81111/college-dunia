@@ -4,6 +4,8 @@ export const IMAGE_URL='https://image-static.collegedunia.com/public/college_dat
 
 export const RANKING_IMAGE_URL='https://image-static.collegedunia.com/public/college_data/images/agencyLogo/collegedunia_2025_ranking1733467060.png';
 
+export const FEATURED_IMAGE_URL='https://image-static.collegedunia.com/public/asset/img/featured-flag.svg';
+
 export const RADIO_OPTIONS = [
     // { label: "CD Ranking", value: "cdRanking" },
     { label: "Reviews", value: "reviews" },
